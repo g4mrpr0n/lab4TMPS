@@ -136,12 +136,14 @@
     <ClInclude Include="abstractions\inventory\InventoryAbstract.h" />
     <ClInclude Include="abstractions\payments\CartAbstract.h" />
     <ClInclude Include="abstractions\payments\MakePurchaseAbstract.h" />
+    <ClInclude Include="abstractions\payments\PaymentStrategy.h" />
     <ClInclude Include="abstractions\views\InventoryDisplayAbstract.h" />
     <ClInclude Include="abstractions\views\ViewShoppingCartAbstract.h" />
     <ClInclude Include="genres\FictionGenre.h" />
     <ClInclude Include="inventory\Book.h" />
     <ClInclude Include="inventory\BookInventory.h" />
     <ClInclude Include="shop\MakePurchase.h" />
+    <ClInclude Include="shop\PaymentStrategyConcrete.h" />
     <ClInclude Include="shop\ShoppingCart.h" />
     <ClInclude Include="views\InventoryDisplay.h" />
     <ClInclude Include="views\ViewShoppingCart.h" />

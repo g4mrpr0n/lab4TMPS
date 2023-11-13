@@ -65,5 +65,11 @@
     <ClInclude Include="shop\ShoppingCart.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="abstractions\payments\PaymentStrategy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shop\PaymentStrategyConcrete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

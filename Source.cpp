@@ -10,6 +10,7 @@
 #include "views/ViewShoppingCart.h"
 #include "inventory/BookInventory.h"
 #include "views/InventoryDisplay.h"
+#include "shop/PaymentStrategyConcrete.h"
 
 int main()
 {
@@ -56,9 +57,17 @@ int main()
 	{
 		system("cls");
 		if (step1 == 'c')
+		{
 			std::cout << mainMenuClient;
+			CustomerPaymentStrategy customerStrategy;
+			c->setPaymentStrategy(&customerStrategy);
+		}
 		else if (step1 == 'a')
+		{
 			std::cout << mainMenuClient + menuExtra;
+			AdminPaymentStrategy adminStrategy;
+			c->setPaymentStrategy(&adminStrategy);
+		}
 		std::cin >> choice;
 
 		switch (choice)
@@ -112,9 +121,9 @@ int main()
 
 		if (step1 == 'c')
 		{
-			std::cout << c->calculateTotal() * 1 << " since you're a customer.";
+			std::cout << c->calculateTotalRate(c->calculateTotal()) << " since you're a customer.";
 		}
-		else { std::cout << c->calculateTotal() * 0.5 << " since you're an admin."; }
+		else { std::cout << c->calculateTotalRate(c->calculateTotal()) << " since you're an admin."; }
 		MakePurchase m;
 		MakePurchaseAbstract* makepurchase;
 		makepurchase = &m;
