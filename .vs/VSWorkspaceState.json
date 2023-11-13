@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\abstractions",
+    "\\abstractions\\inventory",
+    "\\abstractions\\payments",
+    "\\abstractions\\views",
+    "\\genres",
+    "\\inventory",
+    "\\shop",
+    "\\views"
   ],
-  "SelectedNode": "\\lab4TMPS.sln",
+  "SelectedNode": "\\Source.cpp",
   "PreviewInSolutionExplorer": false
 }

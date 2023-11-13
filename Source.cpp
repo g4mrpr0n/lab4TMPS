@@ -11,6 +11,7 @@
 #include "inventory/BookInventory.h"
 #include "views/InventoryDisplay.h"
 #include "shop/PaymentStrategyConcrete.h"
+#include "inventory/AddBookCommand.h"
 
 int main()
 {
@@ -31,6 +32,9 @@ int main()
 	CartAbstract* c;
 	ShoppingCart s;
 	c = &s;
+
+	Command* addCommand = new AddBookCommand(inv, new Book("New Book", "New Author", 2023, fs, 75));
+	addCommand->execute();
 
 	BookAbstract* b1 = new Book("Le big meowmeow", "Leon Jenkins", 1999, fs, 50);
 	BookAbstract* b2 = new Book("The bright tomorrow", "Anan Poopy", 2020, fs, 100);
